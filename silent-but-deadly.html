@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Silent But Deadly — B.L.E.E.D.</title>
+<meta name="description" content="For the women in the darkest spaces. You are not alone. Say the thing.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=Parisienne&family=Lato:wght@400;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --dark-plum:#3D1F3A;
+    --deepest:#241222;
+    --plum:#4A2545;
+    --old-mauve:#673147;
+    --mauve:#9C6B82;
+    --dark-mauve:#8C5870;
+    --dusty:#996688;
+    --gold:#C9A24B;
+    --soft-pink:#FFD1E3;
+    --ink:#F3E4EC;
+  }
+  *{margin:0;padding:0;box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    background:var(--deepest);
+    color:var(--ink);
+    font-family:'Lato',sans-serif;
+    font-size:19px;
+    line-height:1.9;
+  }
+  a{color:var(--gold);}
+
+  nav{
+    position:sticky;top:0;z-index:50;
+    display:flex;justify-content:space-between;align-items:center;
+    padding:16px 5vw;
+    background:rgba(36,18,34,.9);
+    backdrop-filter:blur(8px);
+  }
+  .nav-brand{
+    font-family:'Playfair Display',serif;
+    font-weight:900;font-size:1.4rem;letter-spacing:.06em;
+    color:var(--soft-pink);text-decoration:none;
+  }
+  .nav-links{display:flex;gap:26px;}
+  .nav-links a{
+    color:var(--ink);text-decoration:none;font-size:1rem;
+    letter-spacing:.04em;padding:6px 2px;
+    border-bottom:1px solid transparent;
+    transition:color .25s,border-color .25s;
+  }
+  .nav-links a:hover{color:var(--soft-pink);border-color:var(--soft-pink);}
+
+  header.page-head{
+    text-align:center;
+    padding:90px 5vw 50px;
+    position:relative;overflow:hidden;
+  }
+  .pour{position:absolute;border-radius:50%;filter:blur(90px);pointer-events:none;}
+  .pourA{width:56vw;height:40vw;background:var(--old-mauve);opacity:.35;top:-16%;left:-14%;}
+  .pourB{width:44vw;height:34vw;background:var(--dark-plum);opacity:.6;bottom:-22%;right:-12%;}
+  .head-inner{position:relative;z-index:2;}
+  .head-img{
+    max-width:min(480px,85vw);
+    width:100%;height:auto;
+    border-radius:6px;
+    margin-bottom:34px;
+  }
+  .eyebrow{
+    font-family:'Parisienne',cursive;
+    color:var(--dusty);font-size:2rem;margin-bottom:14px;
+  }
+  h1{
+    font-family:'Parisienne',cursive;
+    font-weight:400;
+    font-size:clamp(2.6rem,8vw,4.8rem);
+    color:var(--soft-pink);
+    line-height:1.2;
+    margin-bottom:10px;
+  }
+  .head-sub{
+    color:var(--dusty);font-size:1.1rem;letter-spacing:.03em;
+    max-width:520px;margin:0 auto;
+  }
+
+  .crack{display:block;width:100%;height:56px;}
+
+  section{padding:70px 5vw;position:relative;overflow:hidden;}
+  .wrap{max-width:700px;margin:0 auto;position:relative;z-index:2;}
+
+  .talk{background:var(--dark-plum);}
+  .talk .pourC{position:absolute;width:44vw;height:32vw;border-radius:50%;
+    background:var(--old-mauve);filter:blur(95px);opacity:.4;top:-10%;right:-14%;}
+  .talk-open{
+    font-family:'Playfair Display',serif;font-style:italic;font-weight:700;
+    font-size:clamp(1.7rem,5vw,2.6rem);
+    color:var(--soft-pink);line-height:1.4;
+    margin-bottom:30px;
+  }
+  p{margin-bottom:22px;}
+  p.big{font-size:1.22rem;}
+  em.hold{color:var(--soft-pink);font-style:italic;}
+  .voice-line{
+    font-family:'Parisienne',cursive;
+    color:var(--gold);font-size:clamp(1.9rem,5.5vw,2.8rem);
+    line-height:1.3;margin:34px 0;text-align:center;
+  }
+
+  .drop{background:var(--deepest);text-align:center;}
+  .drop .pourD{position:absolute;width:40vw;height:30vw;border-radius:50%;
+    background:var(--plum);filter:blur(90px);opacity:.5;bottom:-16%;left:-10%;}
+  .drop h2{
+    font-family:'Playfair Display',serif;font-weight:800;
+    font-size:clamp(1.8rem,5vw,2.6rem);
+    color:var(--soft-pink);margin-bottom:24px;
+  }
+  .drop p.big{max-width:600px;margin-left:auto;margin-right:auto;}
+  .email-door{
+    display:inline-block;margin-top:26px;
+    text-decoration:none;
+    font-family:'Playfair Display',serif;font-weight:700;
+    font-size:1.2rem;letter-spacing:.08em;
+    color:var(--ink);
+    padding:16px 34px;
+    border:1px solid var(--gold);
+    border-radius:4px;
+    transition:color .25s,border-color .25s,background .25s;
+  }
+  .email-door:hover{color:var(--gold);background:rgba(201,162,75,.08);}
+  .drop-note{color:var(--dusty);font-size:1rem;margin-top:20px;font-style:italic;}
+
+  .doors{background:var(--dark-plum);}
+  .doors h2{
+    font-family:'Playfair Display',serif;font-weight:800;
+    font-size:clamp(1.8rem,5vw,2.6rem);
+    color:var(--soft-pink);margin-bottom:24px;text-align:center;
+  }
+  .doors p.big{text-align:center;max-width:620px;margin-left:auto;margin-right:auto;}
+  .door-card{
+    border:1px solid rgba(201,162,75,.4);
+    background:rgba(36,18,34,.5);
+    border-radius:6px;
+    padding:34px 30px;
+    text-align:center;
+    margin:34px auto 0;
+    max-width:520px;
+  }
+  .door-card .num{
+    font-family:'Playfair Display',serif;font-weight:900;
+    font-size:clamp(2.6rem,8vw,4rem);
+    color:var(--gold);letter-spacing:.08em;
+  }
+  .door-card .how{color:var(--ink);font-size:1.15rem;margin-top:6px;}
+  .door-card .why{color:var(--dusty);font-size:1.02rem;margin-top:14px;font-style:italic;}
+  .honesty{
+    max-width:620px;margin:44px auto 0;
+    padding:24px 28px;
+    border-left:3px solid var(--old-mauve);
+    background:rgba(36,18,34,.4);
+    color:var(--dusty);font-size:1.05rem;
+  }
+  .honesty b{color:var(--ink);}
+
+  footer{
+    background:var(--deepest);
+    padding:80px 5vw 44px;text-align:center;
+  }
+  .foot-voice{
+    font-family:'Parisienne',cursive;
+    font-size:clamp(2.4rem,6.5vw,4rem);
+    color:var(--soft-pink);margin-bottom:34px;line-height:1.2;
+  }
+  .foot-links{margin-bottom:26px;}
+  .foot-links a{
+    color:var(--ink);text-decoration:none;margin:0 15px;font-size:1rem;
+  }
+  .foot-links a:hover{color:var(--gold);}
+  .foot-contact{margin-bottom:30px;font-size:1.05rem;}
+  .foot-contact a{font-weight:700;text-decoration:none;}
+  .foot-contact a:hover{color:var(--soft-pink);}
+  .foot-copy{color:#7a5468;font-size:.9rem;}
+
+  @media(max-width:640px){
+    .nav-links{gap:13px;}
+    .nav-links a{font-size:.85rem;}
+    section{padding:56px 6vw;}
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <a class="nav-brand" href="index.html">B.L.E.E.D.</a>
+  <div class="nav-links">
+    <a href="index.html">Home</a>
+    <a href="media.html">Media</a>
+    <a href="silent-but-deadly.html">Silent But Deadly</a>
+  </div>
+</nav>
+
+<header class="page-head">
+  <div class="pour pourA"></div>
+  <div class="pour pourB"></div>
+  <div class="head-inner">
+    <img class="head-img" src="silent_hero.png"
+         alt="Broken glasses"
+         onerror="this.style.display='none';">
+    <div class="eyebrow">when it's heavy</div>
+    <h1>Silent But Deadly</h1>
+    <div class="head-sub">Yeah you — that silence is deadly, Sis. Need a private room?<br><span style="display:block;margin-top:10px;font-family:'Parisienne',cursive;font-size:1.7rem;color:var(--soft-pink);">I got you.</span></div>
+  </div>
+</header>
+
+<svg class="crack" viewBox="0 0 1200 56" preserveAspectRatio="none" aria-hidden="true">
+  <path d="M0,30 L140,26 L190,38 L310,22 L360,34 L520,18 L575,32 L730,24 L790,36 L940,20 L1010,32 L1200,26"
+        fill="none" stroke="#C9A24B" stroke-width="2.5" opacity=".7"/>
+  <path d="M310,22 L330,10 M575,32 L600,46 M940,20 L925,8"
+        fill="none" stroke="#C9A24B" stroke-width="1.5" opacity=".5"/>
+</svg>
+
+<section class="talk">
+  <div class="pourC"></div>
+  <div class="wrap">
+    <div class="talk-open">Biiiihhh — I'm tired too.</div>
+    <p class="big">Your feelings, your pain, your frustration — all of it is valid, babes. Every bit. And you have to know something: <em class="hold">you are NOT alone.</em></p>
+    <p class="big">I know that "f*** it" place. Where you don't want to do anything drastic — you just wish you weren't in this moment, this life, right now. I've been there. I built this whole thing in the dark of my own shit — and some days I'm still in it. That's exactly why this page exists.</p>
+    <p class="big">You don't have to post it. You don't have to tell the group chat. You don't have to perform being okay for one more person.</p>
+    <div class="voice-line">Say the thing. No judgement here.</div>
+  </div>
+</section>
+
+<svg class="crack" viewBox="0 0 1200 56" preserveAspectRatio="none" aria-hidden="true">
+  <path d="M0,26 L120,32 L230,18 L290,34 L450,24 L510,38 L660,20 L740,34 L890,22 L960,36 L1090,24 L1200,30"
+        fill="none" stroke="#C9A24B" stroke-width="2.5" opacity=".7"/>
+  <path d="M450,24 L470,44 M740,34 L765,14 M1090,24 L1105,42"
+        fill="none" stroke="#C9A24B" stroke-width="1.5" opacity=".5"/>
+</svg>
+
+<section class="drop">
+  <div class="pourD"></div>
+  <div class="wrap">
+    <h2>Drop your shit off here.</h2>
+    <p class="big">I'm not a therapist — and this isn't that. This is dirty laundry, and we're gonna do it the best we can, together. Write me. Say it exactly how it sits in you. I will read every word, and I'm the one who won't flinch.</p>
+    <a class="email-door" href="mailto:Bleedbare@proton.me?subject=It's%20Heavy">Write Me — It's Heavy</a>
+    <div class="drop-note">This comes straight to me. Nobody else sees it.</div>
+  </div>
+</section>
+
+<svg class="crack" viewBox="0 0 1200 56" preserveAspectRatio="none" aria-hidden="true">
+  <path d="M0,32 L160,24 L240,36 L390,20 L460,34 L610,22 L690,38 L830,24 L910,34 L1060,20 L1200,28"
+        fill="none" stroke="#C9A24B" stroke-width="2.5" opacity=".7"/>
+  <path d="M390,20 L375,6 M690,38 L710,50 M1060,20 L1075,6"
+        fill="none" stroke="#C9A24B" stroke-width="1.5" opacity=".5"/>
+</svg>
+
+<section class="doors">
+  <div class="wrap">
+    <h2>When it's bigger than a vent</h2>
+    <p class="big">Sometimes it's heavier than dirty laundry — and that's not weakness, that's weight. When you need somebody trained for the heaviest of it, day or night:</p>
+    <div class="door-card">
+      <div class="num">988</div>
+      <div class="how">Text or call 988 — anytime, 24/7.</div>
+      <div class="why">Not because you're crazy. Because you deserve backup.</div>
+    </div>
+    <div class="honesty">
+      <b>Real with you, always:</b> I'm your ear, not a professional. And if what you share tells me you're in real danger, I have a human duty to help connect you with the people who can keep you safe. That's not me flinching — that's me refusing to lose you.
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="foot-voice">You are not alone.</div>
+  <div class="foot-links">
+    <a href="index.html">Home</a>
+    <a href="media.html">Media</a>
+    <a href="silent-but-deadly.html">Silent But Deadly</a>
+  </div>
+  <div class="foot-contact">
+    <a href="mailto:Bleedbare@proton.me?subject=It's%20Heavy">Bleedbare@proton.me</a>
+  </div>
+  <div class="foot-copy">© 2026 B.L.E.E.D. — Breaking Lethal Expectations. Embracing Disclosure. All rights reserved.</div>
+</footer>
+
+</body>
+</html>
