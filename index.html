@@ -144,6 +144,50 @@
   .door.quiet:hover{color:var(--soft-pink);border-color:var(--soft-pink);}
   .door.quiet:hover .arr{color:var(--soft-pink);}
 
+
+  .hero-invite{
+    margin:0 auto 48px;
+    max-width:520px;
+    padding:32px 24px;
+    border-top:1px solid rgba(201,162,75,.35);
+    border-bottom:1px solid rgba(201,162,75,.35);
+  }
+  .invite-hook{
+    font-family:'Playfair Display',serif;
+    font-weight:900;
+    font-size:clamp(1.8rem,4.5vw,2.4rem);
+    color:var(--soft-pink);
+    margin-bottom:10px;
+    letter-spacing:.02em;
+  }
+  .invite-line{
+    font-family:'Parisienne',cursive;
+    color:var(--gold);
+    font-size:clamp(1.4rem,3vw,1.8rem);
+    line-height:1.3;
+    margin-bottom:20px;
+  }
+  .invite-btn{
+    display:inline-flex;align-items:center;gap:12px;
+    text-decoration:none;
+    font-family:'Playfair Display',serif;font-weight:700;
+    font-size:1.15rem;letter-spacing:.08em;
+    color:var(--ink);
+    padding-bottom:6px;
+    border-bottom:2px solid var(--gold);
+    transition:color .25s,border-color .25s;
+  }
+  .invite-btn .arr{color:var(--gold);transition:transform .3s;display:inline-block;}
+  .invite-btn:hover{color:var(--gold);}
+  .invite-btn:hover .arr{transform:translateX(5px);}
+  .door-with-note{display:flex;flex-direction:column;align-items:center;gap:8px;}
+  .door-note{
+    font-family:'Parisienne',cursive;
+    color:var(--dusty);
+    font-size:1.1rem;
+    line-height:1.2;
+  }
+
   .crack{display:block;width:100%;height:56px;}
 
   section{padding:80px 5vw;position:relative;overflow:hidden;}
@@ -254,9 +298,16 @@
     </div>
     <div class="hero-voice">Bleed on purpose.</div>
     <div class="hero-sub">You know them "f them kids" days? When you mean it — for a minute? Girl. This is where that goes.</div>
+    <div class="hero-invite">
+      <div class="invite-hook">Got Truth?</div>
+      <div class="invite-line">Does it sit here? So should you.</div>
+      <a class="invite-btn" href="mailto:Bleedbare@proton.me?subject=Spill">Spill <span class="arr">→</span></a>
+    </div>
     <div class="hero-doors">
-      <a class="door" href="mailto:Bleedbare@proton.me?subject=Spill">Spill <span class="arr">→</span></a>
-      <a class="door quiet" href="silent-but-deadly.html">It's Heavy — Hit Me <span class="arr">→</span></a>
+      <div class="door-with-note">
+        <a class="door quiet" href="silent-but-deadly.html">It's Heavy — Hit Me <span class="arr">→</span></a>
+        <div class="door-note">No one sees this but me.</div>
+      </div>
     </div>
   </div>
 </header>
